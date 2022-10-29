@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PatientController {
 
     @RequestMapping("/patient")
-    public void getPatients() {
-        System.out.print("Routes");
+    public String getPatients() {
+        return "Hello world";
     }
 }
