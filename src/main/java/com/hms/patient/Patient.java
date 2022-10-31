@@ -59,4 +59,7 @@ public class Patient {
         this.prescription = prescription;
     }
 
+    public Object getId() {
+        return this.id;
+    }
 }

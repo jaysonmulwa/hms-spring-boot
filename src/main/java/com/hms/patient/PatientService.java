@@ -16,21 +16,25 @@ public class PatientService {
     }
 
     public Patient getPatient(int id){
-        patients.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-        return new Patient();
+        return patients.stream().filter(p -> p.getId().equals(id)).findFirst().get();
     }
 
     public void addPatient(Patient patient) {
         patients.add(patient);
     }
 
-    public Patient editPatient(int id, Patient patient) {
-        return patient;
+    public void updatePatient(int id, Patient patient) {
+        for (int i =0; i < patients.size(); i++) {
+            Patient p = patients.get(i);
+            if (p.getId().equals(id)){
+                patients.set(i, patient);
+                return;
+            }
+        }
     }
 
-    public int deletePatient(int id) {
-        patients.get(id);
-        return id;
+    public void deletePatient(int id) {
+        patients.removeIf(p -> p.getId().equals(id));
     }
 
 
