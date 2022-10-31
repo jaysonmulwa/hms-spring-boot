@@ -1,10 +1,13 @@
 package com.hms.patient;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class PatientService {
     private List<Patient> patients = new ArrayList<>(Arrays.asList(
             new Patient(31, 51, "Plumber", new Date(), null, null, "Lactose allergy", null, null),

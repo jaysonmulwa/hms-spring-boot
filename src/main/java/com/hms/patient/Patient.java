@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
+@Entity
 public class Patient {
-
+    @Id
     public int id;
     private int age;
     private int weight;
