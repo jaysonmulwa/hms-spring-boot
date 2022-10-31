@@ -5,6 +5,8 @@ import com.hms.appointment.Appointment;
 import com.hms.history.History;
 import com.hms.payment.Payment;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.Random;
 @Entity
 public class Patient {
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public int id;
     private int age;
     private int weight;

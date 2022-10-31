@@ -1,44 +1,37 @@
 package com.hms.patient;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class PatientService {
-    private List<Patient> patients = new ArrayList<>(Arrays.asList(
-            new Patient(31, 51, "Plumber", new Date(), null, null, "Lactose allergy", null, null),
-            new Patient(31, 51, "Plumber", new Date(), null, null, "Lactose allergy", null, null)
-    ));
+
+    @Autowired
+    private PatientRepository patientRepository;
 
     public List<Patient> getAllPatients() {
+        List<Patient> patients = new ArrayList<>();
+        patientRepository.findAll().forEach(patients::add);
         return patients;
     }
 
-    public Patient getPatient(int id){
-        return patients.stream().filter(p -> p.getId().equals(id)).findFirst().get();
+    public Optional<Patient> getPatient(int id){
+        Optional<Patient> byId = patientRepository.findById(id);
+        return byId;
     }
 
     public void addPatient(Patient patient) {
-        patients.add(patient);
+        patientRepository.save(patient);
     }
 
     public void updatePatient(int id, Patient patient) {
-        for (int i =0; i < patients.size(); i++) {
-            Patient p = patients.get(i);
-            if (p.getId().equals(id)){
-                patients.set(i, patient);
-                return;
-            }
-        }
+        patientRepository.save(patient);
     }
 
     public void deletePatient(int id) {
-        patients.removeIf(p -> p.getId().equals(id));
+        patientRepository.deleteById(id);
     }
-
 
 }
