@@ -4,6 +4,8 @@ import com.hms.address.Address;
 import com.hms.appointment.Appointment;
 import com.hms.history.History;
 import com.hms.payment.Payment;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.util.ArrayList;
 import java.util.Date;
