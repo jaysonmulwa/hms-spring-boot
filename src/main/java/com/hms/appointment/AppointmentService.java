@@ -11,7 +11,7 @@ public class AppointmentService {
     @Autowired
     private AppointmentRepository appointmentRepository;
 
-    public List<Appointment> getAllAppointment() {
+    public List<Appointment> getAllAppointments() {
         List<Appointment> appointment = new ArrayList<>();
         appointmentRepository.findAll().forEach(appointment::add);
         return appointment;

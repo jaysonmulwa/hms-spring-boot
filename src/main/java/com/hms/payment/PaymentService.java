@@ -11,7 +11,7 @@ public class PaymentService {
     @Autowired
     private PaymentRepository paymentRepository;
 
-    public List<Payment> getAllPayment() {
+    public List<Payment> getAllPayments() {
         List<Payment> payment = new ArrayList<>();
         paymentRepository.findAll().forEach(payment::add);
         return payment;

@@ -13,8 +13,8 @@ public class AppointmentController {
     private AppointmentService appointmentService;
 
     @RequestMapping("/appointment")
-    public List<Appointment> getAllAppointment() {
-        return appointmentService.getAllAppointment();
+    public List<Appointment> getAllAppointments() {
+        return appointmentService.getAllAppointments();
     }
 
     @RequestMapping("/appointment/{id}")

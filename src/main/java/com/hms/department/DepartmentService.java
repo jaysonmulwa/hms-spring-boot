@@ -11,7 +11,7 @@ public class DepartmentService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
-    public List<Department> getAllDepartment() {
+    public List<Department> getAllDepartments() {
         List<Department> department = new ArrayList<>();
         departmentRepository.findAll().forEach(department::add);
         return department;

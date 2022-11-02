@@ -11,7 +11,7 @@ public class NurseService {
     @Autowired
     private NurseRepository nurseRepository;
 
-    public List<Nurse> getAllNurse() {
+    public List<Nurse> getAllNurses() {
         List<Nurse> nurse = new ArrayList<>();
         nurseRepository.findAll().forEach(nurse::add);
         return nurse;

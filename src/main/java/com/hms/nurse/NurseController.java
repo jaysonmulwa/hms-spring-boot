@@ -13,8 +13,8 @@ public class NurseController {
     private NurseService nurseService;
 
     @RequestMapping("/nurse")
-    public List<Nurse> getAllNurse() {
-        return nurseService.getAllNurse();
+    public List<Nurse> getAllNurses() {
+        return nurseService.getAllNurses();
     }
 
     @RequestMapping("/nurse/{id}")

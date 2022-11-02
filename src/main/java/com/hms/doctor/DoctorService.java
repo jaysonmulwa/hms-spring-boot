@@ -11,7 +11,7 @@ public class DoctorService {
     @Autowired
     private DoctorRepository doctorRepository;
 
-    public List<Doctor> getAllDoctor() {
+    public List<Doctor> getAllDoctors() {
         List<Doctor> doctor = new ArrayList<>();
         doctorRepository.findAll().forEach(doctor::add);
         return doctor;

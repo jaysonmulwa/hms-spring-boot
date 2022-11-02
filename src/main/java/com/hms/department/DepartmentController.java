@@ -13,8 +13,8 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @RequestMapping("/department")
-    public List<Department> getAllDepartment() {
-        return departmentService.getAllDepartment();
+    public List<Department> getAllDepartments() {
+        return departmentService.getAllDepartments();
     }
 
     @RequestMapping("/department/{id}")

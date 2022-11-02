@@ -13,8 +13,8 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @RequestMapping("/payment")
-    public List<Payment> getAllPayment() {
-        return paymentService.getAllPayment();
+    public List<Payment> getAllPayments() {
+        return paymentService.getAllPayments();
     }
 
     @RequestMapping("/payment/{id}")
