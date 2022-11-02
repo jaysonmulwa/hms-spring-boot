@@ -1,14 +1,21 @@
 package com.hms.department;
 
-import java.util.Random;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+import java.util.Random;
+@Entity
 public class Department {
-    public int departmentId;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    public int id;
     public String departmentName;
 
     public Department (String departmentName) {
         Random rand = new Random();
-        this.departmentId  = rand.nextInt(1000);
+        this.id  = rand.nextInt(1000);
         this.departmentName = departmentName;
     }
 

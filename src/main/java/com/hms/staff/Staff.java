@@ -2,11 +2,17 @@ package com.hms.staff;
 
 import com.hms.address.Address;
 import com.hms.department.Department;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.util.Date;
-
+@Entity
 public class Staff {
-    public int staffId;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    public int id;
     public String employmentStatus;
     public Date startDate;
     public Date endDate;

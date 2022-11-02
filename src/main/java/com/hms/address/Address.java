@@ -1,7 +1,9 @@
 package com.hms.address;
 
-import java.util.Date;
+import jakarta.persistence.Entity;
 
+import java.util.Date;
+@Entity
 public class Address {
     private String title;
     private String firstName;
