@@ -1,6 +1,5 @@
 package com.hms.staff;
 
-import com.hms.address.Address;
 import com.hms.department.Department;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,15 +12,22 @@ public class Staff {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     public int id;
+
+    private String title;
+    private String firstName;
+    private String middleName;
+    private String lastName;
+    private Date birthDate;
+    private String gender;
+    private String homeAddress;
+    private String phone;
+    private String kinContacts;
     public String employmentStatus;
     public Date startDate;
     public Date endDate;
     public String education;
     public String certifications;
     public String languages;
-    public Date birthDate;
-    public Address address;
-    public Department department;
 
     public Staff() {
 

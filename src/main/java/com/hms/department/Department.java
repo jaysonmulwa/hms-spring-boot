@@ -13,10 +13,7 @@ public class Department {
     public int id;
     public String departmentName;
 
-    public Department (String departmentName) {
-        Random rand = new Random();
-        this.id  = rand.nextInt(1000);
-        this.departmentName = departmentName;
+    public Department() {
     }
 
     public String getDepartmentName() {

@@ -1,6 +1,5 @@
 package com.hms.appointment;
 
-import com.hms.payment.Payment;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,10 +16,12 @@ public class Appointment {
     public Date appointmentDate;
     public String appointmentDescription;
     public int staffId;
+    //public ArrayList<Payment> paymentsList;
 
-    public ArrayList<Payment> paymentsList;
+    public Appointment() {
+    }
 
-    public Appointment (Date _appointmentDate, String _appointmentDescription, int _staffId) {
+    /*public Appointment (Date _appointmentDate, String _appointmentDescription, int _staffId) {
         Random rand = new Random();
         this.id = rand.nextInt(1000);
         this.appointmentDate = _appointmentDate;
@@ -28,5 +29,6 @@ public class Appointment {
         this.staffId = _staffId;
         ArrayList<Payment> _paymentList = new ArrayList<Payment>();
         this.paymentsList = _paymentList;
-    }
+    }*/
+
 }

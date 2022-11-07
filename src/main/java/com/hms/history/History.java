@@ -17,11 +17,7 @@ public class History {
     public String narrative;
     public int staffId;
 
-    public History (Date date, String narrative, int staffId) {
-        Random rand = new Random();
-        this.id  = rand.nextInt(1000);
-        this.date = date;
-        this.narrative = narrative;
-        this.staffId = staffId;
+    public History() {
     }
+
 }
