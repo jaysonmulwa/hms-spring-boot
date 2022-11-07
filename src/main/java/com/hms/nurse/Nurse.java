@@ -10,6 +10,7 @@ import java.util.Random;
 @Entity
 public class Nurse extends Staff {
     public String wardNumber;
+    public String staffCategory = "nurse";
 
     public Nurse() {
     }

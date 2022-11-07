@@ -13,6 +13,7 @@ public class Doctor extends Staff {
 
     public String wardNumber;
     public String speciality;
+    public String staffCategory = "doctor";
 
     public Doctor() {
     }

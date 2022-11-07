@@ -11,12 +11,16 @@ public class Department {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     public int id;
-    public String departmentName;
+    private String departmentName;
 
     public Department() {
     }
 
     public String getDepartmentName() {
-        return this.departmentName;
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 }

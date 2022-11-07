@@ -28,6 +28,7 @@ public class Staff {
     public String education;
     public String certifications;
     public String languages;
+    public String staffCategory; //doctor or nurse
 
     public Staff() {
 

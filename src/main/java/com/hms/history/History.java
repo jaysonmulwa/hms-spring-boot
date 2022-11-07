@@ -13,11 +13,34 @@ public class History {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     public int id;
-    public Date date;
-    public String narrative;
-    public int staffId;
+    private Date date;
+    private String narrative;
+    private int staffId;
 
     public History() {
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getNarrative() {
+        return narrative;
+    }
+
+    public void setNarrative(String narrative) {
+        this.narrative = narrative;
+    }
+
+    public int getStaffId() {
+        return staffId;
+    }
+
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
+    }
 }

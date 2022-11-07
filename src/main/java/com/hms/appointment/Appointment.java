@@ -13,22 +13,34 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     public int id;
-    public Date appointmentDate;
-    public String appointmentDescription;
-    public int staffId;
-    //public ArrayList<Payment> paymentsList;
-
+    private Date appointmentDate;
+    private String appointmentDescription;
+    private int staffId;
     public Appointment() {
     }
 
-    /*public Appointment (Date _appointmentDate, String _appointmentDescription, int _staffId) {
-        Random rand = new Random();
-        this.id = rand.nextInt(1000);
-        this.appointmentDate = _appointmentDate;
-        this.appointmentDescription = _appointmentDescription;
-        this.staffId = _staffId;
-        ArrayList<Payment> _paymentList = new ArrayList<Payment>();
-        this.paymentsList = _paymentList;
-    }*/
+    public Date getAppointmentDate() {
+        return appointmentDate;
+    }
+
+    public void setAppointmentDate(Date appointmentDate) {
+        this.appointmentDate = appointmentDate;
+    }
+
+    public String getAppointmentDescription() {
+        return appointmentDescription;
+    }
+
+    public void setAppointmentDescription(String appointmentDescription) {
+        this.appointmentDescription = appointmentDescription;
+    }
+
+    public int getStaffId() {
+        return staffId;
+    }
+
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
+    }
 
 }
