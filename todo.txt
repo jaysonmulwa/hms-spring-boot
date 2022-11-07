@@ -1,0 +1,4 @@
+1. Autogenerate Swagger documentation.
+2. Created associations to return nested data.
+3. Auth & Access controls - for different user types.
+4. Unit tests.
