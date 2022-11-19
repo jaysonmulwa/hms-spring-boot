@@ -1,5 +1,7 @@
 package com.hms.doctor;
 
+import com.hms.operations.GivePrescription;
+import com.hms.operations.TreatPatient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,19 @@ public class DoctorService {
 
     public void deleteDoctor(int id) {
         doctorRepository.deleteById(id);
+    }
+
+    public void doOperation(Optional<Doctor> doctor, String operation, int patient) {
+
+        if (operation.equalsIgnoreCase("treat_patient")) {
+            TreatPatient t = new TreatPatient(doctor);
+            t.execute();
+        }
+
+        if (operation.equalsIgnoreCase("give_prescription")) {
+            GivePrescription p = new GivePrescription(doctor);
+            p.execute();
+        }
     }
 
 }

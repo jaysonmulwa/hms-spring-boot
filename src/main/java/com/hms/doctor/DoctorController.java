@@ -36,4 +36,10 @@ public class DoctorController {
     public void deleteDoctor(@PathVariable int id) {
         doctorService.deleteDoctor(id);
     }
+
+    @RequestMapping(method = RequestMethod.POST, value="/doctor/{id}/operation/{operation}/patient/{patient}")
+    public void doOperation(@PathVariable int id, @PathVariable String operation, @PathVariable int patient) {
+        Optional<Doctor> doctor = doctorService.getDoctor(id);
+        doctorService.doOperation(doctor, operation, patient);
+    }
 }
