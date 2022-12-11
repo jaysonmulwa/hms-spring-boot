@@ -19,14 +19,14 @@ public class Doctor extends Staff {
     }
 
     public boolean givePrescription (Patient patient) {
-        patient.setPrescription("3 tablets, 3 times a day"); // gives prescription here
+        //patient.setPrescription("3 tablets, 3 times a day"); // gives prescription here
         //History history = new History(new Date(), "Prescription: 3 tablets, 3 times a day", this.id);
         //patient.historyList.add(history);
         return true;
     }
 
     public boolean treatPatient (Patient patient) {
-        patient.setSickness("Malaria"); // diagnoses sickness here
+        //patient.setSickness("Malaria"); // diagnoses sickness here
         //History history = new History(new Date(), "Treated for: Malaria", this.id);
         //patient.historyList.add(history);
         return true;

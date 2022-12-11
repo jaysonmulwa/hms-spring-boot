@@ -1,16 +1,19 @@
 package com.hms.payment;
 
+import com.hms.patient.Patient;
 import jakarta.persistence.*;
 
 @Entity
 public class Payment {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
     private String payment_method;
     private double payment_amt;
     private int appointment_id;
     private String currency_code;
+
     private int patient_id;
 
     public Payment() {
@@ -49,11 +52,4 @@ public class Payment {
         this.currency_code = currency_code;
     }
 
-    public int getPatient_id() {
-        return patient_id;
-    }
-
-    public void setPatient_id(int patient_id) {
-        this.patient_id = patient_id;
-    }
 }
